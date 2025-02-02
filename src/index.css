@@ -4,3 +4,7 @@
 * {
   font-family: "Poppins", serif;
 }
+
+html, body {
+  overflow-x: hidden;
+}
