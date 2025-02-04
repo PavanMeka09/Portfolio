@@ -1,6 +1,6 @@
-import { Navbar } from "./Components/Navbar"
-import { Projects } from "./Pages/Projects"
-import { Skills } from "./Pages/Skills"
+import { Navbar } from "./Components/Navbar.jsx"
+import { Projects } from "./Pages/Projects.jsx"
+import { Skills } from "./Pages/Skills.jsx"
 
 function App() {
   return (
