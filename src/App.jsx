@@ -1,4 +1,4 @@
-import { Navbar } from "./Components/Navbar.jsx"
+import { Navbar } from "./Components/Navbar.jsx "
 import { Projects } from "./Pages/Projects.jsx"
 import { Skills } from "./Pages/Skills.jsx"
 
