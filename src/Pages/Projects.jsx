@@ -1,4 +1,4 @@
-import { Card } from '../components/Card'
+import { Card } from '../test/Card'
 
 export const Projects = () => {
   return (
