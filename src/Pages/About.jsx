@@ -1,5 +1,7 @@
-export default function About() {
+export const About = () => {
   return (
-    <div>About</div>
+    <div className='h-screen w-screen flex justify-center items-center flex-wrap p-6'>
+      
+    </div>
   )
 }
