@@ -4,11 +4,12 @@
 
 * {
   font-family: "Poppins", serif;
+  /* border: 2px solid black; */
 }
-/*  
+ 
 h1, h2, h3, h4, p {
   @apply text-zinc-950 dark:text-zinc-100;
-} */
+}
 
 html {
   scroll-behavior: smooth;
