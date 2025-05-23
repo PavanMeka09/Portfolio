@@ -1,16 +1,14 @@
 import { Navbar } from "./Components/Navbar.jsx"
 import { Projects } from "./Pages/Projects.jsx"
-import { Skills } from "./Pages/Skills.jsx"
 import { About } from "./Pages/About.jsx"
 
 function App() {
   return (
-    <>
+    <div  className="bg-white dark:bg-zinc-950">
       <Navbar />
       <Projects />
-      <Skills />
       <About />
-    </>
+    </div>
   )
 }
 

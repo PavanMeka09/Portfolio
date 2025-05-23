@@ -1,4 +1,5 @@
 import Yellow from '../assets/Yellow.png'
+import { ThemeSwitcher } from '../utils/ThemeSwitcher'
 
 export const Navbar = () => {
   return (
@@ -8,13 +9,7 @@ export const Navbar = () => {
           <img src={Yellow} className='h-[100%] rounded-full'/>
         </a>
         <div className='hidden gap-10 sm:flex'>
-          {/* <a href="#about">About Me</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#resume">Resume</a>
-          <a href="#contact">Contact</a> */}
-          <button className='cursor-pointer'>Dark</button>
+          <ThemeSwitcher className="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-md cursor-pointer"/>
         </div>
       </div>
     </div>
