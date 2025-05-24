@@ -2,7 +2,6 @@ import { Navbar } from "./Components/Navbar.jsx"
 import { Projects } from "./Pages/Projects.jsx"
 import { About } from "./Pages/About.jsx"
 import { Footer } from "./Components/Footer.jsx"
-import { Resume } from "./Components/Resume.jsx"
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
       <About />
       <Projects />
       <Footer />
-      <Resume />
     </div>
   )
 }
