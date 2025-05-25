@@ -1,4 +1,4 @@
-import { Sun, Moon } from 'lucide-react';
+import { LuSun, LuMoon } from 'react-icons/lu';
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -27,7 +27,7 @@ export const ThemeSwitcher = (props) => {
   };
 
   const renderIcon = () => {
-    const Icon = isDark ? Sun : Moon;
+    const Icon = isDark ? LuSun : LuMoon;
     return (
       <button onClick={toggle}>
         <Icon size={40} className={ props.className + " text-zinc-800 dark:text-zinc-100 active:translate-y-1 transition-[transform]"} />
