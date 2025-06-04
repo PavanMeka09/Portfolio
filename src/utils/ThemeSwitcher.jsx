@@ -3,19 +3,35 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 export const ThemeSwitcher = (props) => {
-  const [isDark, setIsDark] = useState(
-    localStorage.getItem("isDark") === "true"
-  );
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem("isDark");
+    if (savedTheme === null) {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return savedTheme === "true";
+  });
 
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
+    // Listen for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e) => {
+      if (localStorage.getItem("isDark") === null) {
+        setIsDark(e.matches);
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
     isDark
       ? document.querySelector("html").classList.add("dark")
       : document.querySelector("html").classList.remove("dark");
     isAnimating
       ? document.querySelector("body").classList.add("overflow-hidden")
       : document.querySelector("body").classList.remove("overflow-hidden");
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, [isDark, isAnimating]);
 
   const toggle = () => {
