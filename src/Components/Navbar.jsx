@@ -4,7 +4,7 @@ import { ThemeSwitcher } from '../utils/ThemeSwitcher'
 export const Navbar = () => {
   return (
     <div className='h-[10vh] w-screen bg-transparent flex justify-center items-center fixed top-0 z-[100]'>
-      <div className='h-[80%] w-[80%] lg:w-[50%] border-[1px] dark:border-white rounded-xl flex justify-between items-center lg:px-16 px-4 bg-clip-padding backdrop-filter backdrop-blur-lg'>
+      <div className='h-[100%] w-[100%] border-b-[1px] border-black/20 dark:border-white/20 flex justify-between items-center px-16 bg-clip-padding backdrop-filter backdrop-blur-lg'>
         <a href="https://pavanmeka.vercel.app" className='h-[130%]'>
           <img src={black} className='h-[100%] rounded-full dark:filter dark:invert'/>
         </a>
