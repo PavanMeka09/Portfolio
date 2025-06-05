@@ -64,7 +64,7 @@ export const ThemeSwitcher = (props) => {
             animate={{ scale: 1, opacity: 1}}
             exit={{ opacity: 0}}
             transition={{ duration: .3}}
-            className= "h-[200rem] w-[200rem] bg-[#18181b] dark:bg-zinc-100 rounded-full absolute mix-blend-difference"
+            className= "h-[300rem] w-[300rem] bg-[#18181b] dark:bg-zinc-100 rounded-full absolute mix-blend-difference"
             onAnimationComplete={() => setIsAnimating(false)}
           />
         )}
