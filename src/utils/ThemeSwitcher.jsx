@@ -5,8 +5,11 @@ import { motion, AnimatePresence } from "motion/react";
 export const ThemeSwitcher = (props) => {
   const [isDark, setIsDark] = useState(() => {
     const savedTheme = localStorage.getItem("isDark");
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
     if (savedTheme === null) {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      localStorage.setItem("isDark", systemPrefersDark);
+      return systemPrefersDark;
     }
     return savedTheme === "true";
   });
@@ -14,10 +17,10 @@ export const ThemeSwitcher = (props) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    // Listen for system theme changes
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e) => {
       if (localStorage.getItem("isDark") === null) {
+        localStorage.setItem("isDark", e.matches);
         setIsDark(e.matches);
       }
     };
