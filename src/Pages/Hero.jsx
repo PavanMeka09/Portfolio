@@ -11,7 +11,7 @@ import {
   SiDocker, SiKubernetes, 
   SiLeetcode
 } from "react-icons/si";
-import { FaAws, FaJava } from "react-icons/fa";
+import { FaAws, FaJava, FaChevronDown } from "react-icons/fa";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -66,6 +66,10 @@ export const Hero = () => {
             <SiLeetcode size={20} className="text-[#FFA116] dark:text-[#FFA116] sm:w-[25px] sm:h-[25px]"/>
           </a>
         </div>
+      </div>
+      {/* Scroll Down Icon */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex flex-col items-center z-20">
+        <FaChevronDown className="text-zinc-400 dark:text-zinc-600 text-3xl animate-bounce-slow" />
       </div>
     </div>
   )
