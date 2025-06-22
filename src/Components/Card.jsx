@@ -5,6 +5,9 @@ export const Card = (props) => {
     <div
       className="relative w-full max-w-[25rem] h-auto min-h-[15rem] border-[1px] border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 transition-all duration-300 flex flex-col justify-evenly py-4 items-center rounded-xl px-4 gap-4 hover:border-gray-400 dark:hover:border-gray-600 hover:scale-[1.02] hover:shadow-lg dark:hover:shadow-gray-800/50"
     >
+      {props.img && (
+        <img src={props.img} alt={props.name + ' project'} className="w-full h-40 object-cover rounded-lg mb-2" />
+      )}
       <div className='w-[100%]'>
         <h1 className='text-xl font-[500] text-gray-900 dark:text-gray-100'>{props.name}</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">{props.desc}</p>
