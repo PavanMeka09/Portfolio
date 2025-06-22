@@ -1,17 +1,8 @@
 import { motion } from 'framer-motion';
 import { LuMail, LuLinkedin, LuGithub} from "react-icons/lu";
 import 'react-tooltip/dist/react-tooltip.css';
-import { 
-  SiTypescript, SiJavascript, SiPython, SiC, SiCplusplus, SiGo, 
-  SiReact, SiNextdotjs, SiTailwindcss, SiRedux, 
-  SiNodedotjs, SiExpress, 
-  SiMysql, SiPostgresql, SiMongodb, SiFirebase, 
-  SiPrisma, 
-  SiGit, SiGithub, 
-  SiDocker, SiKubernetes, 
-  SiLeetcode
-} from "react-icons/si";
-import { FaAws, FaJava, FaChevronDown } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { RiScrollToBottomLine } from "react-icons/ri";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -69,7 +60,7 @@ export const Hero = () => {
       </div>
       {/* Scroll Down Icon */}
       <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex flex-col items-center z-20">
-        <FaChevronDown className="text-zinc-400 dark:text-zinc-600 text-3xl animate-bounce-slow" />
+        <RiScrollToBottomLine  className="text-zinc-400 dark:text-zinc-600 text-2xl  animate-bounce-slow" />
       </div>
     </div>
   )
