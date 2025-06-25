@@ -26,3 +26,28 @@ html, body {
 .animate-bounce-slow {
   animation: bounce-slow 2s infinite;
 }
+
+/* Underline animation for navbar links */
+.nav-underline {
+  position: relative;
+  overflow: hidden;
+}
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  width: 100%;
+  height: 2px;
+  background: #222;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.dark .nav-underline::after {
+  background: #fff;
+}
+.nav-underline:hover::after,
+.nav-underline:focus::after {
+  transform: scaleX(1);
+}
