@@ -5,11 +5,13 @@ import { Footer } from "./Components/Footer.jsx"
 import { Skills } from "./Pages/Skills.jsx"
 import { Contact } from "./Pages/Contact.jsx"
 import { ScrollToTop } from "./Components/ScrollToTop.jsx"
+import { Analytics } from "@vercel/analytics/react"
 // import { Experience } from "./Pages/Experience.jsx"
 
 function App() {
   return (
     <div  className="bg-white dark:bg-zinc-950">
+      <Analytics />
       <Navbar />
       <Hero />
       {/* <Experience /> */}

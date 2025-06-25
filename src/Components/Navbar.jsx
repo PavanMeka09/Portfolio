@@ -10,9 +10,9 @@ export const Navbar = () => {
         </a>
         <div className='hidden sm:flex items-center gap-4 text-md font-semibold'>
           <a href="#" className='px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/10'>Home</a>
-          <a href="#experience" className='px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/10'>Experience</a>
-          <a href="#projects" className='px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/10'>Projects</a>
+          {/* <a href="#experience" className='px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/10'>Experience</a> */}
           <a href="#skills" className='px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/10'>Skills</a>
+          <a href="#projects" className='px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/10'>Projects</a>
           <a href="#contact" className='px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/10'>Contact</a>
         </div>
         <div className='gap-10 sm:flex'>
