@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { 
-  SiTypescript, SiJavascript, SiPython, SiC, SiCplusplus, SiGo,
+  SiTypescript, SiJavascript, SiPython, SiGo,
   SiReact, SiNextdotjs, SiTailwindcss, SiRedux,
   SiNodedotjs, SiExpress, 
   SiMysql, SiPostgresql, SiMongodb, SiFirebase,
@@ -12,7 +12,6 @@ import { FaAws } from 'react-icons/fa';
 import { DiJava } from 'react-icons/di';
 import { motion } from 'framer-motion';
 
-// Add this style block to handle group hover color for each skill icon
 const skillHoverStyles = `
   .group:hover .group\/icon {
     color: var(--icon-hover-color, inherit) !important;

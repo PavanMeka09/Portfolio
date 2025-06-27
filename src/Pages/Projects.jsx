@@ -2,6 +2,7 @@ import { Card } from '../Components/Card'
 import { FaArrowRight } from "react-icons/fa6";
 import test from '../assets/test.png';
 import upiqrgen from '../assets/upiqrgen.png'
+import tabletop from '../assets/tabletop.png'
 import { motion } from 'framer-motion';
 
 export const Projects = () => {
@@ -36,11 +37,11 @@ export const Projects = () => {
           github: 'https://github.com/PavanMeka09/AuthUMS',
           img: test
         }, {
-          name: "OpenCluely",
-          desc: 'Free version of Cluely',
-          stack: ["Typescript", "ElectronJS"],
-          github: 'https://github.com/PavanMeka09/OpenCluely',
-          img: test
+          name: "TabelTop",
+          desc: 'A Full-Stack Web platform for restaurants to manage online orders, table reservations, and delivery services.',
+          stack: ["JavaScript", "PHP", "HTML", "TailwindCSS"],
+          github: 'https://github.com/PavanMeka09/TableTop',
+          img: tabletop
         }, {
           name: "UPIQrGen",
           desc: 'UPI Payment QR Code Generator',
