@@ -34,9 +34,9 @@ export const Hero = () => {
             <span className="border-r-2 border-zinc-700 dark:border-zinc-100 animate-pulse ml-1">&nbsp;</span>
           </p>
           <a
-            href="/resume.pdf"
+            // href="/src/assets/resume.pdf"
             download
-            className="mt-4 mb-2 inline-block px-6 py-2 rounded-full bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 font-medium shadow-md hover:shadow-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-200 border border-transparent hover:border-zinc-700 dark:hover:border-zinc-300 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 text-sm sm:text-base"
+            className="cursor-not-allowed opacity-50 mt-4 mb-2 inline-block px-6 py-2 rounded-full bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 font-medium shadow-md hover:shadow-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-200 border border-transparent hover:border-zinc-700 dark:hover:border-zinc-300 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 text-sm sm:text-base"
           >
             Download Resume
           </a>
