@@ -2,25 +2,9 @@ import { LuGithub} from "react-icons/lu";
 import 'react-tooltip/dist/react-tooltip.css';
 import { SiLeetcode } from "react-icons/si";
 import { RiScrollToBottomLine } from "react-icons/ri";
-import { useState, useEffect } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 export const Hero = () => {
-  const description = "  Web Dev • CLOUD & DevOPS • AI";
-  const [typedText, setTypedText] = useState("");
-  useEffect(() => {
-    setTypedText("");
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i < description.length) {
-        setTypedText((prev) => prev + (description[i] ?? ""));
-        i++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 60);
-    return () => clearInterval(interval);
-  }, []);
-
   return (  
     <div className='relative min-h-screen w-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-[10vh]'>
       <div className='relative z-10 flex flex-col justify-center items-center gap-6 sm:gap-8 lg:gap-10 max-w-4xl'>
@@ -29,10 +13,17 @@ export const Hero = () => {
             <h1 className='text-3xl sm:text-4xl lg:text-6xl font-extralight mb-2 text-center'>Pavan</h1>
             <h1 className='text-3xl sm:text-4xl lg:text-6xl font-medium mb-2 text-center'>Meka</h1>
           </span>
-          <p className='text-sm sm:text-base lg:text-lg text-center max-w-[90%] sm:max-w-none min-h-[2.5em] mt-2'>
-            {typedText}
-            <span className="border-r-2 border-zinc-700 dark:border-zinc-100 animate-pulse ml-1">&nbsp;</span>
-          </p>
+          <TypeAnimation
+            sequence={[
+              'Web Dev • CLOUD & DevOPS • AI',
+              500
+            ]}
+            wrapper="span"
+            speed={25}
+            className="text-gray-900 dark:text-gray-100"
+            style={{ display: 'inline-block' }}
+            repeat={Infinity}
+          />
           <a
             // href="/src/assets/resume.pdf"
             download
