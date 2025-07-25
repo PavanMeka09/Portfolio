@@ -15,7 +15,7 @@ export const Hero = () => {
           </span>
           <TypeAnimation
             sequence={[
-              'Web Dev • CLOUD & DevOPS • AI',
+              'Web Dev • Cloud • DevOps • AI',
               500
             ]}
             wrapper="span"
