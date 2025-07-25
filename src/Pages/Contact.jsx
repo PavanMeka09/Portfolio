@@ -1,5 +1,27 @@
 import { LuMail, LuLinkedin } from "react-icons/lu"
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
+
 export const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <div className="min-h-screen w-full py-24 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 bg-white dark:bg-zinc-950" id="contact">
       <div className="max-w-2xl md:max-w-4xl mx-auto">
@@ -24,7 +46,7 @@ export const Contact = () => {
           <div className="hidden md:flex h-[250px] w-px bg-zinc-200 dark:bg-zinc-800 mx-8" />
           {/* Message Form - right on desktop */}
           <div className="flex flex-1 justify-center items-center min-h-[350px] w-full">
-            <form className="bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-sm p-8 flex flex-col gap-6 w-full max-w-md" style={{minWidth:0}}>
+            <form ref={form} onSubmit={sendEmail} className="bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-sm p-8 flex flex-col gap-6 w-full max-w-md" style={{minWidth:0}}>
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-zinc-700 dark:text-zinc-200 font-medium">Name</label>
                 <input type="text" id="name" name="name" className="px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 focus:outline-none focus:ring-2 focus:ring-zinc-300 dark:focus:ring-zinc-700 transition dark:text-white" required />
